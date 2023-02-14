@@ -1,10 +1,9 @@
 const newFolderName = function (folders) {
-
-  if (folders.includes('New Folder')){
-
+  let result = ''
+  if (folders.includes('New Folder')) {
     let i = 2
-    while(i <= (folders.length + 1)){
-      if (folders.includes( 'New Folder (' + i + ')')){
+    while (i <= (folders.length + 1)) {
+      if (folders.includes('New Folder (' + i + ')')) {
         i++
       } else {
         result = 'New Folder (' + (i) + ')'
@@ -14,13 +13,8 @@ const newFolderName = function (folders) {
   } else {
     result = 'New Folder'
   }
-
-  return result;
-
+  return result
 }
-
-
-
 
 console.log(newFolderName([]))
 console.log(newFolderName(['test']))
