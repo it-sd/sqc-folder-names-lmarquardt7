@@ -7,15 +7,15 @@ const newFolderName = function (folders) {
       if (folders.includes( 'New Folder (' + i + ')')){
         i++
       } else {
-        folders.push('New Folder (' + (i) + ')')
+        result = 'New Folder (' + (i) + ')'
         break
       }
     }
   } else {
-    folders.push('New Folder')
+    result = 'New Folder'
   }
 
-  return folders;
+  return result;
 
 }
 
@@ -30,3 +30,5 @@ console.log(newFolderName(['New Folder']))
 console.log(newFolderName(['New Folder', 'New Folder (2)']))
 console.log(newFolderName(['New Folder', 'New Folder (2)', 'New Folder (3)']))
 console.log(newFolderName(['New Folder', 'New Folder (2)', 'New Folder (3)', 'New Folder (4)']))
+
+module.exports = { newFolderName }
